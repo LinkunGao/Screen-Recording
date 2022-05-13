@@ -12,6 +12,11 @@ Welcome to Electron's documentation!
 
    Introduction/index
    01_app_module/index
+   02_BrowserWindow/index
+
+
+
+See more: https://www.electronjs.org/docs/latest/tutorial/quick-start
 
 Indices and tables
 ==================
