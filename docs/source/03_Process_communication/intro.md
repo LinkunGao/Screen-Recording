@@ -6,10 +6,10 @@
     so we can run all nodejs API.
 
   ```js
-    const path = require('path');
-    const fs = require('fs);
-    const url = path.resolve('root','resource')
-    console.log(fs.existsSync(url))
+  const path = require("path");
+  const fs = require("fs");
+  const url = path.resolve("root", "resource");
+  console.log(fs.existsSync(url));
   ```
 
 - Render Process
@@ -71,47 +71,47 @@
     - `ipcRenderer` is a module comes from render process
       to deal with the data sent by main process.
 
-    ```html
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=p, initial-scale=1.0" />
-        <title>Document</title>
-      </head>
-      <body>
-        <p>hello</p>
-        <button class="btn">Click</button>
+      ```html
+      <!DOCTYPE html>
+      <html lang="en">
+        <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=p, initial-scale=1.0" />
+          <title>Document</title>
+        </head>
+        <body>
+          <p>hello</p>
+          <button class="btn">Click</button>
 
-        <script>
-          // send message
-          const { ipcRenderer } = require("electron");
-          document.querySelector(".btn").addEventListener("click", () => {
-            ipcRenderer.send(
-              "renderer-send",
-              "this message is coming from render process"
-            );
-          });
-          ipcRenderer.on("main-send", (event, data) => {
-            console.log(data);
-          });
-        </script>
-      </body>
-    </html>
-    ```
+          <script>
+            // send message
+            const { ipcRenderer } = require("electron");
+            document.querySelector(".btn").addEventListener("click", () => {
+              ipcRenderer.send(
+                "renderer-send",
+                "this message is coming from render process"
+              );
+            });
+            ipcRenderer.on("main-send", (event, data) => {
+              console.log(data);
+            });
+          </script>
+        </body>
+      </html>
+      ```
 
-    - open dev tool
+      - open dev tool
 
-    ```js
-    mainWin.webContents.openDevTools({ mode: "right" });
-    mainWindow.webContents.openDevTools({ mode: "bottom" });
-    mainWindow.webContents.openDevTools({ mode: "left" });
-    mainWindow.webContents.openDevTools({ mode: "undocked" });
-    ```
+      ```js
+      mainWin.webContents.openDevTools({ mode: "right" });
+      mainWindow.webContents.openDevTools({ mode: "bottom" });
+      mainWindow.webContents.openDevTools({ mode: "left" });
+      mainWindow.webContents.openDevTools({ mode: "undocked" });
+      ```
 
-    - close dev tool
+      - close dev tool
 
-    ```js
-    mainWindow.webContents.closeDevTools();
-    ```
+      ```js
+      mainWindow.webContents.closeDevTools();
+      ```
