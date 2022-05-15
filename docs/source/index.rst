@@ -16,6 +16,7 @@ Welcome to Electron's documentation!
    03_Process_communication/index
    04_Tray/index
    05_recording_api/index
+   Vue/index
 
 
 See more: https://www.electronjs.org/docs/latest/tutorial/quick-start
