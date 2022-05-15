@@ -14,7 +14,8 @@ Welcome to Electron's documentation!
    01_app_module/index
    02_BrowserWindow/index
    03_Process_communication/index
-
+   04_Tray/index
+   05_recording_api/index
 
 
 See more: https://www.electronjs.org/docs/latest/tutorial/quick-start

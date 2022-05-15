@@ -1,4 +1,4 @@
-# Tray for Windows
+# Tray Intro
 
 This is a system tray to enable the addition of icons and contexts to the system notification area.
 
